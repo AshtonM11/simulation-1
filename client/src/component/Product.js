@@ -1,13 +1,13 @@
 import React from 'react'
 
 const Product = (props) => (
-    <div className= 'Product'>
+    <div className='Product'>
         <h1> Product </h1>
-        <img src={props.product.image} /> 
+        <img src={props.product.image} />
         {props.product.name}
         {props.product.description}
         {props.product.price}
     </div>
-  )
-  
-  export default Product
+)
+
+export default Product

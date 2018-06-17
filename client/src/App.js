@@ -25,7 +25,7 @@ class App extends Component {
   componentDidMount() {
     axios({
       method: 'GET',
-      url: BASE_URL + '/api/inventory'
+      url: BASE_URL + '/api/product'
     }).then(response => {
       console.log('this is response', response)
       this.setState({ inventoryList: response.data })
@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Dashboard inventory={this.state.inventoryList} />
+        <Dashboard product={this.state.inventoryList} />
         <Form />
         <Header />
 

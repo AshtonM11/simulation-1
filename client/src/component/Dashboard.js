@@ -4,18 +4,18 @@ import Product from './Product'
 
 
 class Dashboard extends Component {
-    
+
   render() {
     console.log('this.props', this.props)
     return (
       <div className="App">
-       <h1> Dashboard </h1>
-       {this.props.inventory.map(product => (
-         <Product
+        <h1> Dashboard </h1>
+        {this.props.inventory.map(product => (
+          <Product
             key={product.product_id}
             product={product}
-         />
-       ))}
+          />
+        ))}
       </div>
     );
   }
