@@ -1,20 +1,14 @@
-import React, { Component } from 'react';
-import Product from './Product'
-
-
+import React, { Component } from "react";
+import Product from "./Product";
 
 class Dashboard extends Component {
-
   render() {
-    console.log('this.props', this.props)
+    console.log("this.props", this.props);
     return (
       <div className="App">
         <h1> Dashboard </h1>
-        {this.props.inventory.map(product => (
-          <Product
-            key={product.product_id}
-            product={product}
-          />
+        {this.props.product.map(product => (
+          <Product key={product.product_id} product={product} />
         ))}
       </div>
     );
