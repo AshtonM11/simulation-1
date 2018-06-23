@@ -64,7 +64,7 @@ module.exports = {
 
     dbInstance
       .delete_product([params.id])
-      .then(() => res.sendStatus(200))
+      .then(() => res.status(200).send(`deleted ${params.id}`))
       .catch(err => {
         res.status(500).send({
           errorMessage: "Oops! Something went wrong."

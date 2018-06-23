@@ -18,7 +18,7 @@ app.get("/api/products", controller.getAll);
 app.get("/api/product", controller.getOne);
 app.post("/api/product", controller.create);
 app.put("/api/product", controller.update);
-app.delete("/api/product", controller.delete);
+app.delete("/api/product/:id", controller.delete);
 
 const port = process.env.PORT || 3005;
 app.listen(port, () => {
