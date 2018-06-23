@@ -14,11 +14,11 @@ massive(process.env.CONNECTION_STRING)
   })
   .catch(err => console.log(err));
 
-app.get("/api/products", controller.getInventory.getAll);
-app.get("/api/product", controller.getInventory.getOne);
-app.post("/api/product", controller.getInventory.create);
-app.put("/api/product", controller.getInventory.update);
-app.delete("/api/product", controller.getInventory.delete);
+app.get("/api/products", controller.getAll);
+app.get("/api/product", controller.getOne);
+app.post("/api/product", controller.create);
+app.put("/api/product", controller.update);
+app.delete("/api/product", controller.delete);
 
 const port = process.env.PORT || 3005;
 app.listen(port, () => {
