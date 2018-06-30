@@ -68,11 +68,6 @@ class App extends Component {
         <div style={{ margin: "0 auto", marginTop: 40 }}>
           <button onClick={this.clickCancel}> Cancel </button>
           <button> Add to Inventory </button>
-          <button onClick={this.delete}> Delete </button>
-          <input
-            placeholder="delete product"
-            onChange={e => this.setState({ toDelete: e.target.value })}
-          />
         </div>
 
         <div>
@@ -113,6 +108,11 @@ class App extends Component {
             value={this.state.itemForSale.price}
           />
         </div>
+        <button onClick={this.delete}> Delete </button>
+        <input
+          placeholder="delete product"
+          onChange={e => this.setState({ toDelete: e.target.value })}
+        />
       </div>
     );
   }
