@@ -5,7 +5,7 @@ App {
 .header {
   height: 100px;
   width: 100vw;
-  background-color: #9c3524;
+  background-color: #941a07;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -33,7 +33,7 @@ img {
 .form-container {
   height: 520px;
   width: 450px;
-  background-color: #3ad886;
+  background-color: #05c260;
   border-radius: 10px;
   margin: 40px auto;
   padding: 15px;
@@ -50,7 +50,7 @@ img {
 .product-container {
   width: 450px;
   height: 400px;
-  background-color: #ed6b5a;
+  background-color: #4417e6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,11 +67,11 @@ button {
 }
 
 .green-btn {
-  background-color: #3ad886;
+  background-color: #06af58;
 }
 
 .red-btn {
-  background-color: #ab2a19;
+  background-color: #ffffff;
 }
 
 input {

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import Product from "./../Product/Product";
+import Product from "./Product";
 import axios from "axios";
-import "../../App.css";
 
 const BASE_URL = "http://localhost:4000";
 
