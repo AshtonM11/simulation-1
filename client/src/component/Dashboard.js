@@ -1,18 +1,55 @@
 import React, { Component } from "react";
-import Product from "./Product";
+import Product from "./../Product/Product";
+import axios from "axios";
+import "../../App.css";
 
-class Dashboard extends Component {
+const BASE_URL = "http://localhost:4000";
+
+export default class Dashboard extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      inventoryList: [],
+      chosenProduct: {}
+    };
+  }
+
+  getProducts = () => {
+    axios({
+      method: "GET",
+      url: BASE_URL + "/api/inventory"
+    }).then(response => {
+      this.setState({ inventoryList: response.data });
+    });
+  };
+
+  componentDidMount = () => {
+    this.getProducts();
+  };
+
+  componentDidUpdate = () => {
+    this.getProducts();
+  };
+
+  deleteProduct = id => {
+    axios({
+      method: "DELETE",
+      url: BASE_URL + "/api/product/" + id
+    }).then(response => {
+      this.getProducts();
+    });
+  };
+
   render() {
-    console.log("this.props", this.props);
     return (
-      <div className="App">
-        <h1> Dashboard </h1>
-        {this.props.product.map(product => (
-          <Product key={product.product_id} product={product} />
-        ))}
+      <div className="dash-container">
+        <Product
+          inventoryList={this.state.inventoryList}
+          deleteProduct={this.deleteProduct}
+          productChosen={this.state.productChosen}
+        />
       </div>
     );
   }
 }
-
-export default Dashboard;

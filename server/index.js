@@ -20,7 +20,7 @@ app.post("/api/product", controller.create);
 app.put("/api/product", controller.update);
 app.delete("/api/product/:id", controller.delete);
 
-const port = process.env.PORT || 3005;
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}.`);
 });

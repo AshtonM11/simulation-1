@@ -1,28 +1,79 @@
-.App {
+App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.header {
+  height: 100px;
+  width: 100vw;
+  background-color: #9c3524;
   color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.App-title {
-  font-size: 1.5em;
+.dash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-intro {
-  font-size: large;
+.product-description {
+  margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+img {
+  max-width: 320px;
+  max-height: 200px;
+  margin-top: 20px;
+}
+
+.form-container {
+  height: 520px;
+  width: 450px;
+  background-color: #3ad886;
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-container {
+  width: 450px;
+  height: 400px;
+  background-color: #ed6b5a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+button {
+  margin: 20px;
+  font-size: 15px;
+  height: 5em;
+  border-radius: 10px;
+  border: none;
+}
+
+.green-btn {
+  background-color: #3ad886;
+}
+
+.red-btn {
+  background-color: #ab2a19;
+}
+
+input {
+  width: 80%;
 }
